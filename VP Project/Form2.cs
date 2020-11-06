@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using Tulpep.NotificationWindow;
 
 namespace VP_Project
 {
@@ -29,23 +30,14 @@ namespace VP_Project
         }
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            if(numericUpDown1.Value == 0)
+            if (numericUpDown1.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if(result == DialogResult.Yes)
-                {
-                    textBox1.Enabled = false;
-                    textBox1.Text = "Rs " + 0;
-                    numericUpDown1.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown1.Value = 1;
-                    textBox1.Text = "Rs " + 10;
-                }
+                textBox1.Enabled = false;
+                textBox1.Text = "Rs " + 0;
+                numericUpDown1.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -68,21 +60,12 @@ namespace VP_Project
         {
             if (numericUpDown2.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox2.Enabled = false;
-                    textBox2.Text = "Rs " + 0;
-                    numericUpDown2.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown2.Value = 1;
-                    textBox2.Text = "Rs " + 15;
-                }
+                textBox2.Enabled = false;
+                textBox2.Text = "Rs " + 0;
+                numericUpDown2.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -105,21 +88,12 @@ namespace VP_Project
         {
             if (numericUpDown3.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox3.Enabled = false;
-                    textBox3.Text = "Rs " + 0;
-                    numericUpDown3.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown3.Value = 1;
-                    textBox3.Text = "Rs " + 20;
-                }
+                textBox3.Enabled = false;
+                textBox3.Text = "Rs " + 0;
+                numericUpDown3.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -142,21 +116,12 @@ namespace VP_Project
         {
             if (numericUpDown4.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox4.Enabled = false;
-                    textBox4.Text = "Rs " + 0;
-                    numericUpDown4.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown4.Value = 1;
-                    textBox4.Text = "Rs " + 30;
-                }
+                textBox4.Enabled = false;
+                textBox4.Text = "Rs " + 0;
+                numericUpDown4.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -177,21 +142,12 @@ namespace VP_Project
         {
             if (numericUpDown5.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox5.Enabled = false;
-                    textBox5.Text = "Rs " + 0;
-                    numericUpDown5.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown5.Value = 1;
-                    textBox5.Text = "Rs " + 60;
-                }
+                textBox5.Enabled = false;
+                textBox5.Text = "Rs " + 0;
+                numericUpDown5.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -213,21 +169,12 @@ namespace VP_Project
         {
             if (numericUpDown6.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox6.Enabled = false;
-                    textBox6.Text = "Rs " + 0;
-                    numericUpDown6.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown6.Value = 1;
-                    textBox6.Text = "Rs " + 140;
-                }
+                textBox6.Enabled = false;
+                textBox6.Text = "Rs " + 0;
+                numericUpDown6.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -249,21 +196,12 @@ namespace VP_Project
         {
             if (numericUpDown7.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox7.Enabled = false;
-                    textBox7.Text = "Rs " + 0;
-                    numericUpDown7.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value); 
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown7.Value = 1;
-                    textBox7.Text = "Rs " + 260;
-                }
+                textBox7.Enabled = false;
+                textBox7.Text = "Rs " + 0;
+                numericUpDown7.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -285,21 +223,12 @@ namespace VP_Project
         {
             if (numericUpDown8.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox8.Enabled = false;
-                    textBox8.Text = "Rs " + 0;
-                    numericUpDown8.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown8.Value = 1;
-                    textBox8.Text = "Rs " + 500;
-                }
+                textBox8.Enabled = false;
+                textBox8.Text = "Rs " + 0;
+                numericUpDown8.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -321,21 +250,12 @@ namespace VP_Project
         {
             if (numericUpDown9.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox9.Enabled = false;
-                    textBox9.Text = "Rs " + 0;
-                    numericUpDown9.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown9.Value = 1;
-                    textBox9.Text = "Rs " + 240;
-                }
+                textBox9.Enabled = false;
+                textBox9.Text = "Rs " + 0;
+                numericUpDown9.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -357,21 +277,12 @@ namespace VP_Project
         {
             if (numericUpDown10.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox10.Enabled = false;
-                    textBox10.Text = "Rs " + 0;
-                    numericUpDown10.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown10.Value = 1;
-                    textBox10.Text = "Rs " + 480;
-                }
+                textBox10.Enabled = false;
+                textBox10.Text = "Rs " + 0;
+                numericUpDown10.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -393,21 +304,12 @@ namespace VP_Project
         {
             if (numericUpDown11.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox11.Enabled = false;
-                    textBox11.Text = "Rs " + 0;
-                    numericUpDown11.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown11.Value = 1;
-                    textBox11.Text = "Rs " + 360;
-                }
+                textBox11.Enabled = false;
+                textBox11.Text = "Rs " + 0;
+                numericUpDown11.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -429,21 +331,12 @@ namespace VP_Project
         {
             if (numericUpDown12.Value == 0)
             {
-                DialogResult result = MessageBox.Show("You are setting the quantity to 0\nAre you sure you want to delete this item ?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    textBox12.Enabled = false;
-                    textBox12.Text = "Rs " + 0;
-                    numericUpDown12.Enabled = false;
-                    decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
-                    + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
-                    label53.Text = "Rs : " + totalAmount.ToString() + " /-";
-                }
-                else
-                {
-                    numericUpDown12.Value = 1;
-                    textBox12.Text = "Rs " + 1000;
-                }
+                textBox12.Enabled = false;
+                textBox12.Text = "Rs " + 0;
+                numericUpDown12.Enabled = false;
+                decimal totalAmount = (10 * numericUpDown1.Value) + (15 * numericUpDown2.Value) + (20 * numericUpDown3.Value) + (30 * numericUpDown4.Value) + (60 * numericUpDown5.Value) + (140 * numericUpDown6.Value)
+                + (260 * numericUpDown7.Value) + (500 * numericUpDown8.Value) + (240 * numericUpDown9.Value) + (480 * numericUpDown10.Value) + (360 * numericUpDown11.Value) + (1000 * numericUpDown12.Value);
+                label53.Text = "Rs : " + totalAmount.ToString() + " /-";
             }
             else
             {
@@ -502,46 +395,96 @@ namespace VP_Project
             numericUpDown11.Value = 0;
         }
 
-
-
-
-
-
-
-
-
+        private bool mandatory()
+        {
+            if(numericUpDown1.Value == 0 && numericUpDown2.Value == 0 && numericUpDown3.Value == 0 && numericUpDown4.Value == 0 && numericUpDown5.Value == 0 && numericUpDown6.Value == 0
+                 && numericUpDown7.Value == 0 && numericUpDown8.Value == 0 && numericUpDown9.Value == 0 && numericUpDown10.Value == 0 && numericUpDown11.Value == 0 && numericUpDown12.Value == 0)
+            {
+                MessageBox.Show("You didn't have ordered any item yet.\nPlease select any item first then submit your order!", "Select First", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return false;
+            }
+            else if (textBox14.Text == string.Empty || textBox13.Text == string.Empty || textBox15.Text == string.Empty || textBox16.Text == string.Empty)
+            {
+                MessageBox.Show("Please provide all the information above in mandatory fields.", "Mandatory Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         private void button25_Click(object sender, EventArgs e)
         {
-
+            if (mandatory())
+            {
+                try
+                {
+                    MySqlConnection con = new MySqlConnection(@"server=localhost;userid=root;password=mavyaali@795;database=ManagementSystem");
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO CustomerOrder VALUES(@clientname, @phonenumber, @emailid, @deliveryaddress, @quantity_250ml, @quantity_300ml, @quantity_500ml, @quantity_1litre," +
+                        " @quantity_2litre, @quantity_5litre, @quantity_10litre, @quantity_20litre, @quantityofpack_250ml, @quantityofpack_500ml, @quantityofpack_1litre, @quantityofpack_allsizes, @totalamount)", con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@clientname", textBox14.Text);
+                    cmd.Parameters.AddWithValue("@phonenumber", textBox13.Text);
+                    cmd.Parameters.AddWithValue("@emailid", textBox15.Text);
+                    cmd.Parameters.AddWithValue("@deliveryaddress", textBox16.Text);
+                    cmd.Parameters.AddWithValue("@quantity_250ml", numericUpDown1.Value);
+                    cmd.Parameters.AddWithValue("@quantity_300ml", numericUpDown2.Value);
+                    cmd.Parameters.AddWithValue("@quantity_500ml", numericUpDown3.Value);
+                    cmd.Parameters.AddWithValue("@quantity_1litre", numericUpDown4.Value);
+                    cmd.Parameters.AddWithValue("@quantity_2litre", numericUpDown5.Value);
+                    cmd.Parameters.AddWithValue("@quantity_5litre", numericUpDown6.Value);
+                    cmd.Parameters.AddWithValue("@quantity_10litre", numericUpDown7.Value);
+                    cmd.Parameters.AddWithValue("@quantity_20litre", numericUpDown8.Value);
+                    cmd.Parameters.AddWithValue("@quantityofpack_250ml", numericUpDown9.Value);
+                    cmd.Parameters.AddWithValue("@quantityofpack_500ml", numericUpDown10.Value);
+                    cmd.Parameters.AddWithValue("@quantityofpack_1litre", numericUpDown11.Value);
+                    cmd.Parameters.AddWithValue("@quantityofpack_allsizes", numericUpDown12.Value);
+                    cmd.Parameters.AddWithValue("@totalamount",label53.Text);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Properties.Resources.info;
+                    popup.TitleText = "Submitted!";
+                    popup.ContentText = "\nYour order has been submitted successfully";
+                    popup.Popup();
+                    textBox1.Text = "Rs 0"; textBox1.Enabled = false;
+                    textBox2.Text = "Rs 0"; textBox2.Enabled = false;
+                    textBox3.Text = "Rs 0"; textBox3.Enabled = false;
+                    textBox4.Text = "Rs 0"; textBox4.Enabled = false;
+                    textBox5.Text = "Rs 0"; textBox5.Enabled = false;
+                    textBox6.Text = "Rs 0"; textBox6.Enabled = false;
+                    textBox7.Text = "Rs 0"; textBox7.Enabled = false;
+                    textBox8.Text = "Rs 0"; textBox8.Enabled = false;
+                    textBox9.Text = "Rs 0"; textBox9.Enabled = false;
+                    textBox10.Text = "Rs 0"; textBox10.Enabled = false;
+                    textBox11.Text = "Rs 0"; textBox11.Enabled = false;
+                    textBox12.Text = "Rs 0"; textBox12.Enabled = false;
+                    numericUpDown1.Value = 0; numericUpDown1.Enabled = false;
+                    numericUpDown2.Value = 0; numericUpDown2.Enabled = false;
+                    numericUpDown3.Value = 0; numericUpDown3.Enabled = false;
+                    numericUpDown4.Value = 0; numericUpDown4.Enabled = false;
+                    numericUpDown5.Value = 0; numericUpDown5.Enabled = false;
+                    numericUpDown6.Value = 0; numericUpDown6.Enabled = false;
+                    numericUpDown6.Value = 0; numericUpDown7.Enabled = false;
+                    numericUpDown8.Value = 0; numericUpDown8.Enabled = false;
+                    numericUpDown9.Value = 0; numericUpDown9.Enabled = false;
+                    numericUpDown10.Value = 0; numericUpDown10.Enabled = false;
+                    numericUpDown11.Value = 0; numericUpDown11.Enabled = false;
+                    numericUpDown12.Value = 0; numericUpDown12.Enabled = false;
+                    textBox14.Text = string.Empty;
+                    textBox14.Text = string.Empty;
+                    textBox13.Text = string.Empty;
+                    textBox15.Text = string.Empty;
+                    textBox16.Text = string.Empty;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Order not accepted due to:\n" + ex);
+                }
+            }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         private void button24_Click(object sender, EventArgs e)
         {
@@ -549,16 +492,17 @@ namespace VP_Project
         }
         private void button26_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to logout ?\nMake sure you have confirmed your order !", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Do you want to logout ?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(result == DialogResult.Yes)
             {
                 Form1 f1 = new Form1();
                 f1.Show();
             }
         }
+
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit ?\nMake sure you have confirmed your order !", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Do you want to exit ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 Form1 f1 = new Form1();

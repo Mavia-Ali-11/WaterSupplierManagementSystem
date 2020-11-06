@@ -92,15 +92,30 @@
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
             this.button26 = new System.Windows.Forms.Button();
+            this.label61 = new System.Windows.Forms.Label();
             this.button25 = new System.Windows.Forms.Button();
+            this.label54 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
             this.button22 = new System.Windows.Forms.Button();
+            this.label59 = new System.Windows.Forms.Label();
             this.button23 = new System.Windows.Forms.Button();
+            this.label55 = new System.Windows.Forms.Label();
             this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
+            this.label56 = new System.Windows.Forms.Label();
             this.button24 = new System.Windows.Forms.Button();
             this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
             this.button19 = new System.Windows.Forms.Button();
@@ -159,21 +174,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -1042,6 +1042,59 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Your Cart";
             // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Arial", 25.25F, System.Drawing.FontStyle.Bold);
+            this.label64.ForeColor = System.Drawing.Color.Red;
+            this.label64.Location = new System.Drawing.Point(280, 1286);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(30, 40);
+            this.label64.TabIndex = 76;
+            this.label64.Text = "*";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label62.ForeColor = System.Drawing.Color.Gray;
+            this.label62.Location = new System.Drawing.Point(53, 1331);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(365, 23);
+            this.label62.TabIndex = 75;
+            this.label62.Text = "- Please provide all basic information below";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Tahoma", 18.25F, System.Drawing.FontStyle.Bold);
+            this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label63.Location = new System.Drawing.Point(53, 1295);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(229, 30);
+            this.label63.TabIndex = 74;
+            this.label63.Text = "Mandatory Fields";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Font = new System.Drawing.Font("Verdana", 15F);
+            this.textBox16.Location = new System.Drawing.Point(451, 1517);
+            this.textBox16.Multiline = true;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(276, 34);
+            this.textBox16.TabIndex = 58;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Arial", 14F);
+            this.label60.ForeColor = System.Drawing.Color.Red;
+            this.label60.Location = new System.Drawing.Point(589, 1491);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(17, 22);
+            this.label60.TabIndex = 57;
+            this.label60.Text = "*";
+            // 
             // button26
             // 
             this.button26.BackColor = System.Drawing.Color.RoyalBlue;
@@ -1055,6 +1108,17 @@
             this.button26.Text = "Logout";
             this.button26.UseVisualStyleBackColor = false;
             this.button26.Click += new System.EventHandler(this.button26_Click);
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Arial", 13F);
+            this.label61.ForeColor = System.Drawing.Color.Gray;
+            this.label61.Location = new System.Drawing.Point(447, 1491);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(144, 21);
+            this.label61.TabIndex = 56;
+            this.label61.Text = "Delivery Address";
             // 
             // button25
             // 
@@ -1070,6 +1134,17 @@
             this.button25.UseVisualStyleBackColor = false;
             this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Arial", 14F);
+            this.label54.ForeColor = System.Drawing.Color.Red;
+            this.label54.Location = new System.Drawing.Point(586, 1394);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(17, 22);
+            this.label54.TabIndex = 54;
+            this.label54.Text = "*";
+            // 
             // label53
             // 
             this.label53.AutoSize = true;
@@ -1081,6 +1156,17 @@
             this.label53.TabIndex = 71;
             this.label53.Text = "Rs : 0 /-";
             // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Arial", 14F);
+            this.label57.ForeColor = System.Drawing.Color.Red;
+            this.label57.Location = new System.Drawing.Point(125, 1491);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(17, 22);
+            this.label57.TabIndex = 53;
+            this.label57.Text = "*";
+            // 
             // label52
             // 
             this.label52.AutoSize = true;
@@ -1091,6 +1177,24 @@
             this.label52.Size = new System.Drawing.Size(256, 42);
             this.label52.TabIndex = 70;
             this.label52.Text = "Total Amount";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Font = new System.Drawing.Font("Verdana", 15F);
+            this.textBox13.Location = new System.Drawing.Point(451, 1419);
+            this.textBox13.Multiline = true;
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(276, 34);
+            this.textBox13.TabIndex = 50;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Font = new System.Drawing.Font("Verdana", 15F);
+            this.textBox15.Location = new System.Drawing.Point(59, 1517);
+            this.textBox15.Multiline = true;
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(276, 34);
+            this.textBox15.TabIndex = 49;
             // 
             // label51
             // 
@@ -1104,6 +1208,17 @@
             this.label51.TabIndex = 69;
             this.label51.Text = "Deletion";
             // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Arial", 13F);
+            this.label58.ForeColor = System.Drawing.Color.Gray;
+            this.label58.Location = new System.Drawing.Point(447, 1393);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(140, 21);
+            this.label58.TabIndex = 52;
+            this.label58.Text = "Contact Number";
+            // 
             // button22
             // 
             this.button22.BackColor = System.Drawing.Color.OrangeRed;
@@ -1113,10 +1228,21 @@
             this.button22.Location = new System.Drawing.Point(941, 855);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(107, 38);
-            this.button22.TabIndex = 68;
+            this.button22.TabIndex = 29;
             this.button22.Text = "Delete Item";
             this.button22.UseVisualStyleBackColor = false;
             this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Arial", 13F);
+            this.label59.ForeColor = System.Drawing.Color.Gray;
+            this.label59.Location = new System.Drawing.Point(55, 1491);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(73, 21);
+            this.label59.TabIndex = 51;
+            this.label59.Text = "Email Id";
             // 
             // button23
             // 
@@ -1127,10 +1253,21 @@
             this.button23.Location = new System.Drawing.Point(941, 919);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(107, 38);
-            this.button23.TabIndex = 67;
+            this.button23.TabIndex = 32;
             this.button23.Text = "Delete Item";
             this.button23.UseVisualStyleBackColor = false;
             this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Arial", 14F);
+            this.label55.ForeColor = System.Drawing.Color.Red;
+            this.label55.Location = new System.Drawing.Point(110, 1394);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(17, 22);
+            this.label55.TabIndex = 48;
+            this.label55.Text = "*";
             // 
             // numericUpDown12
             // 
@@ -1145,8 +1282,17 @@
             0});
             this.numericUpDown12.Name = "numericUpDown12";
             this.numericUpDown12.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown12.TabIndex = 66;
+            this.numericUpDown12.TabIndex = 34;
             this.numericUpDown12.ValueChanged += new System.EventHandler(this.numericUpDown12_ValueChanged);
+            // 
+            // textBox14
+            // 
+            this.textBox14.Font = new System.Drawing.Font("Verdana", 15F);
+            this.textBox14.Location = new System.Drawing.Point(59, 1419);
+            this.textBox14.Multiline = true;
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(276, 34);
+            this.textBox14.TabIndex = 46;
             // 
             // numericUpDown11
             // 
@@ -1161,8 +1307,19 @@
             0});
             this.numericUpDown11.Name = "numericUpDown11";
             this.numericUpDown11.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown11.TabIndex = 65;
+            this.numericUpDown11.TabIndex = 31;
             this.numericUpDown11.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Arial", 13F);
+            this.label56.ForeColor = System.Drawing.Color.Gray;
+            this.label56.Location = new System.Drawing.Point(55, 1393);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(57, 21);
+            this.label56.TabIndex = 47;
+            this.label56.Text = "Name";
             // 
             // button24
             // 
@@ -1173,7 +1330,7 @@
             this.button24.Location = new System.Drawing.Point(941, 982);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(107, 39);
-            this.button24.TabIndex = 64;
+            this.button24.TabIndex = 35;
             this.button24.Text = "Delete Item";
             this.button24.UseVisualStyleBackColor = false;
             this.button24.Click += new System.EventHandler(this.button24_Click);
@@ -1191,7 +1348,7 @@
             0});
             this.numericUpDown10.Name = "numericUpDown10";
             this.numericUpDown10.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown10.TabIndex = 63;
+            this.numericUpDown10.TabIndex = 28;
             this.numericUpDown10.ValueChanged += new System.EventHandler(this.numericUpDown10_ValueChanged);
             // 
             // button19
@@ -1203,7 +1360,7 @@
             this.button19.Location = new System.Drawing.Point(941, 584);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(107, 39);
-            this.button19.TabIndex = 62;
+            this.button19.TabIndex = 20;
             this.button19.Text = "Delete Item";
             this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.button19_Click);
@@ -1217,7 +1374,7 @@
             this.button20.Location = new System.Drawing.Point(941, 647);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(107, 38);
-            this.button20.TabIndex = 61;
+            this.button20.TabIndex = 23;
             this.button20.Text = "Delete Item";
             this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
@@ -1231,7 +1388,7 @@
             this.button21.Location = new System.Drawing.Point(941, 794);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(107, 38);
-            this.button21.TabIndex = 60;
+            this.button21.TabIndex = 26;
             this.button21.Text = "Delete Item";
             this.button21.UseVisualStyleBackColor = false;
             this.button21.Click += new System.EventHandler(this.button21_Click);
@@ -1249,7 +1406,7 @@
             0});
             this.numericUpDown9.Name = "numericUpDown9";
             this.numericUpDown9.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown9.TabIndex = 59;
+            this.numericUpDown9.TabIndex = 25;
             this.numericUpDown9.ValueChanged += new System.EventHandler(this.numericUpDown9_ValueChanged);
             // 
             // numericUpDown8
@@ -1265,7 +1422,7 @@
             0});
             this.numericUpDown8.Name = "numericUpDown8";
             this.numericUpDown8.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown8.TabIndex = 58;
+            this.numericUpDown8.TabIndex = 22;
             this.numericUpDown8.ValueChanged += new System.EventHandler(this.numericUpDown8_ValueChanged);
             // 
             // numericUpDown7
@@ -1281,7 +1438,7 @@
             0});
             this.numericUpDown7.Name = "numericUpDown7";
             this.numericUpDown7.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown7.TabIndex = 57;
+            this.numericUpDown7.TabIndex = 19;
             this.numericUpDown7.ValueChanged += new System.EventHandler(this.numericUpDown7_ValueChanged);
             // 
             // button16
@@ -1293,7 +1450,7 @@
             this.button16.Location = new System.Drawing.Point(941, 395);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(107, 38);
-            this.button16.TabIndex = 56;
+            this.button16.TabIndex = 11;
             this.button16.Text = "Delete Item";
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
@@ -1307,7 +1464,7 @@
             this.button17.Location = new System.Drawing.Point(941, 458);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(107, 38);
-            this.button17.TabIndex = 55;
+            this.button17.TabIndex = 14;
             this.button17.Text = "Delete Item";
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
@@ -1321,7 +1478,7 @@
             this.button18.Location = new System.Drawing.Point(941, 521);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(107, 38);
-            this.button18.TabIndex = 54;
+            this.button18.TabIndex = 17;
             this.button18.Text = "Delete Item";
             this.button18.UseVisualStyleBackColor = false;
             this.button18.Click += new System.EventHandler(this.button18_Click);
@@ -1339,7 +1496,7 @@
             0});
             this.numericUpDown6.Name = "numericUpDown6";
             this.numericUpDown6.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown6.TabIndex = 53;
+            this.numericUpDown6.TabIndex = 16;
             this.numericUpDown6.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
             // 
             // numericUpDown5
@@ -1355,7 +1512,7 @@
             0});
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown5.TabIndex = 52;
+            this.numericUpDown5.TabIndex = 13;
             this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
             // numericUpDown4
@@ -1371,7 +1528,7 @@
             0});
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown4.TabIndex = 51;
+            this.numericUpDown4.TabIndex = 10;
             this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
             // button15
@@ -1383,7 +1540,7 @@
             this.button15.Location = new System.Drawing.Point(941, 332);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(107, 38);
-            this.button15.TabIndex = 50;
+            this.button15.TabIndex = 8;
             this.button15.Text = "Delete Item";
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
@@ -1397,7 +1554,7 @@
             this.button14.Location = new System.Drawing.Point(941, 269);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(107, 38);
-            this.button14.TabIndex = 49;
+            this.button14.TabIndex = 5;
             this.button14.Text = "Delete Item";
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
@@ -1411,7 +1568,7 @@
             this.button13.Location = new System.Drawing.Point(941, 206);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(107, 38);
-            this.button13.TabIndex = 48;
+            this.button13.TabIndex = 2;
             this.button13.Text = "Delete Item";
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
@@ -1429,7 +1586,7 @@
             0});
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown3.TabIndex = 47;
+            this.numericUpDown3.TabIndex = 7;
             this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // numericUpDown2
@@ -1445,7 +1602,7 @@
             0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown2.TabIndex = 46;
+            this.numericUpDown2.TabIndex = 4;
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // numericUpDown1
@@ -1461,7 +1618,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(217, 39);
-            this.numericUpDown1.TabIndex = 45;
+            this.numericUpDown1.TabIndex = 1;
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label50
@@ -1663,7 +1820,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(265, 40);
-            this.textBox12.TabIndex = 11;
+            this.textBox12.TabIndex = 33;
             this.textBox12.Text = "Rs 0 ";
             // 
             // textBox11
@@ -1675,7 +1832,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(265, 40);
-            this.textBox11.TabIndex = 10;
+            this.textBox11.TabIndex = 30;
             this.textBox11.Text = "Rs 0 ";
             // 
             // textBox10
@@ -1687,7 +1844,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(265, 40);
-            this.textBox10.TabIndex = 9;
+            this.textBox10.TabIndex = 27;
             this.textBox10.Text = "Rs 0 ";
             // 
             // textBox9
@@ -1699,7 +1856,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(265, 40);
-            this.textBox9.TabIndex = 8;
+            this.textBox9.TabIndex = 24;
             this.textBox9.Text = "Rs 0 ";
             // 
             // textBox8
@@ -1711,7 +1868,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(265, 40);
-            this.textBox8.TabIndex = 7;
+            this.textBox8.TabIndex = 21;
             this.textBox8.Text = "Rs 0 ";
             // 
             // textBox7
@@ -1723,7 +1880,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(265, 40);
-            this.textBox7.TabIndex = 6;
+            this.textBox7.TabIndex = 18;
             this.textBox7.Text = "Rs 0 ";
             // 
             // textBox6
@@ -1735,7 +1892,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(265, 40);
-            this.textBox6.TabIndex = 5;
+            this.textBox6.TabIndex = 15;
             this.textBox6.Text = "Rs 0 ";
             // 
             // textBox5
@@ -1747,7 +1904,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(265, 40);
-            this.textBox5.TabIndex = 4;
+            this.textBox5.TabIndex = 12;
             this.textBox5.Text = "Rs 0 ";
             // 
             // textBox4
@@ -1759,7 +1916,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(265, 40);
-            this.textBox4.TabIndex = 3;
+            this.textBox4.TabIndex = 9;
             this.textBox4.Text = "Rs 0 ";
             // 
             // textBox3
@@ -1771,7 +1928,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(265, 40);
-            this.textBox3.TabIndex = 2;
+            this.textBox3.TabIndex = 6;
             this.textBox3.Text = "Rs 0 ";
             // 
             // textBox2
@@ -1783,7 +1940,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(265, 40);
-            this.textBox2.TabIndex = 1;
+            this.textBox2.TabIndex = 3;
             this.textBox2.Text = "Rs 0 ";
             // 
             // textBox1
@@ -1904,163 +2061,6 @@
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 4;
             this.pictureBox11.TabStop = false;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Arial", 13F);
-            this.label56.ForeColor = System.Drawing.Color.Gray;
-            this.label56.Location = new System.Drawing.Point(55, 1393);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(57, 21);
-            this.label56.TabIndex = 47;
-            this.label56.Text = "Name";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Font = new System.Drawing.Font("Verdana", 15F);
-            this.textBox14.Location = new System.Drawing.Point(59, 1419);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(276, 34);
-            this.textBox14.TabIndex = 46;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Arial", 14F);
-            this.label55.ForeColor = System.Drawing.Color.Red;
-            this.label55.Location = new System.Drawing.Point(110, 1394);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(17, 22);
-            this.label55.TabIndex = 48;
-            this.label55.Text = "*";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Arial", 13F);
-            this.label59.ForeColor = System.Drawing.Color.Gray;
-            this.label59.Location = new System.Drawing.Point(55, 1491);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(73, 21);
-            this.label59.TabIndex = 51;
-            this.label59.Text = "Email Id";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Arial", 13F);
-            this.label58.ForeColor = System.Drawing.Color.Gray;
-            this.label58.Location = new System.Drawing.Point(447, 1393);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(140, 21);
-            this.label58.TabIndex = 52;
-            this.label58.Text = "Contact Number";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Font = new System.Drawing.Font("Verdana", 15F);
-            this.textBox15.Location = new System.Drawing.Point(59, 1517);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(276, 34);
-            this.textBox15.TabIndex = 49;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Verdana", 15F);
-            this.textBox13.Location = new System.Drawing.Point(451, 1419);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(276, 34);
-            this.textBox13.TabIndex = 50;
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Arial", 14F);
-            this.label57.ForeColor = System.Drawing.Color.Red;
-            this.label57.Location = new System.Drawing.Point(125, 1491);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(17, 22);
-            this.label57.TabIndex = 53;
-            this.label57.Text = "*";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Arial", 14F);
-            this.label54.ForeColor = System.Drawing.Color.Red;
-            this.label54.Location = new System.Drawing.Point(586, 1394);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(17, 22);
-            this.label54.TabIndex = 54;
-            this.label54.Text = "*";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Arial", 13F);
-            this.label61.ForeColor = System.Drawing.Color.Gray;
-            this.label61.Location = new System.Drawing.Point(447, 1491);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(144, 21);
-            this.label61.TabIndex = 56;
-            this.label61.Text = "Delivery Address";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Arial", 14F);
-            this.label60.ForeColor = System.Drawing.Color.Red;
-            this.label60.Location = new System.Drawing.Point(589, 1491);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(17, 22);
-            this.label60.TabIndex = 57;
-            this.label60.Text = "*";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Font = new System.Drawing.Font("Verdana", 15F);
-            this.textBox16.Location = new System.Drawing.Point(451, 1517);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(276, 34);
-            this.textBox16.TabIndex = 58;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label62.ForeColor = System.Drawing.Color.Gray;
-            this.label62.Location = new System.Drawing.Point(53, 1331);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(365, 23);
-            this.label62.TabIndex = 75;
-            this.label62.Text = "- Please provide all basic information below";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Tahoma", 18.25F, System.Drawing.FontStyle.Bold);
-            this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label63.Location = new System.Drawing.Point(53, 1295);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(229, 30);
-            this.label63.TabIndex = 74;
-            this.label63.Text = "Mandatory Fields";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Arial", 25.25F, System.Drawing.FontStyle.Bold);
-            this.label64.ForeColor = System.Drawing.Color.Red;
-            this.label64.Location = new System.Drawing.Point(280, 1286);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(30, 40);
-            this.label64.TabIndex = 76;
-            this.label64.Text = "*";
             // 
             // Form2
             // 
