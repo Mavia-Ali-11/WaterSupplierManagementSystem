@@ -420,14 +420,17 @@ namespace VP_Project
             {
                 try
                 {
+                    DateTime now = DateTime.Now;
+                    string dateTime = now.Day + "-" + now.Month + "-" + now.Year + " " + now.Hour + ":" + now.Minute + ":" + now.Second;
                     MySqlConnection con = new MySqlConnection(@"server=localhost;userid=root;password=mavyaali@795;database=ManagementSystem");
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO CustomerOrder VALUES(@clientname, @phonenumber, @emailid, @deliveryaddress, @quantity_250ml, @quantity_300ml, @quantity_500ml, @quantity_1litre," +
-                        " @quantity_2litre, @quantity_5litre, @quantity_10litre, @quantity_20litre, @quantityofpack_250ml, @quantityofpack_500ml, @quantityofpack_1litre, @quantityofpack_allsizes, @totalamount)", con);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO CustomerOrder VALUES(@clientname, @phonenumber, @emailid, @deliveryaddress, @datetimeoforder, @quantity_250ml, @quantity_300ml, @quantity_500ml, @quantity_1litre," +
+                    " @quantity_2litre, @quantity_5litre, @quantity_10litre, @quantity_20litre, @quantityofpack_250ml, @quantityofpack_500ml, @quantityofpack_1litre, @quantityofpack_allsizes, @totalamount)", con);
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@clientname", textBox14.Text);
                     cmd.Parameters.AddWithValue("@phonenumber", textBox13.Text);
                     cmd.Parameters.AddWithValue("@emailid", textBox15.Text);
                     cmd.Parameters.AddWithValue("@deliveryaddress", textBox16.Text);
+                    cmd.Parameters.AddWithValue("@datetimeoforder", dateTime);
                     cmd.Parameters.AddWithValue("@quantity_250ml", numericUpDown1.Value);
                     cmd.Parameters.AddWithValue("@quantity_300ml", numericUpDown2.Value);
                     cmd.Parameters.AddWithValue("@quantity_500ml", numericUpDown3.Value);
@@ -440,14 +443,14 @@ namespace VP_Project
                     cmd.Parameters.AddWithValue("@quantityofpack_500ml", numericUpDown10.Value);
                     cmd.Parameters.AddWithValue("@quantityofpack_1litre", numericUpDown11.Value);
                     cmd.Parameters.AddWithValue("@quantityofpack_allsizes", numericUpDown12.Value);
-                    cmd.Parameters.AddWithValue("@totalamount",label53.Text);
+                    cmd.Parameters.AddWithValue("@totalamount", label53.Text);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
                     PopupNotifier popup = new PopupNotifier();
                     popup.Image = Properties.Resources.info;
-                    popup.TitleText = "Submitted!";
-                    popup.ContentText = "\nYour order has been submitted successfully";
+                    popup.TitleText = "\nSubmitted!";
+                    popup.ContentText = "\n\nYour order has been submitted successfully";
                     popup.Popup();
                     textBox1.Text = "Rs 0"; textBox1.Enabled = false;
                     textBox2.Text = "Rs 0"; textBox2.Enabled = false;
@@ -467,17 +470,14 @@ namespace VP_Project
                     numericUpDown4.Value = 0; numericUpDown4.Enabled = false;
                     numericUpDown5.Value = 0; numericUpDown5.Enabled = false;
                     numericUpDown6.Value = 0; numericUpDown6.Enabled = false;
-                    numericUpDown6.Value = 0; numericUpDown7.Enabled = false;
+                    numericUpDown7.Value = 0; numericUpDown7.Enabled = false;
                     numericUpDown8.Value = 0; numericUpDown8.Enabled = false;
                     numericUpDown9.Value = 0; numericUpDown9.Enabled = false;
                     numericUpDown10.Value = 0; numericUpDown10.Enabled = false;
                     numericUpDown11.Value = 0; numericUpDown11.Enabled = false;
                     numericUpDown12.Value = 0; numericUpDown12.Enabled = false;
-                    textBox14.Text = string.Empty;
-                    textBox14.Text = string.Empty;
-                    textBox13.Text = string.Empty;
-                    textBox15.Text = string.Empty;
-                    textBox16.Text = string.Empty;
+                    textBox13.Text = string.Empty; textBox14.Text = string.Empty;
+                    textBox15.Text = string.Empty; textBox16.Text = string.Empty;
                 }
                 catch (Exception ex)
                 {
