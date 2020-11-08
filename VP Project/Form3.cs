@@ -8,6 +8,7 @@ using System.ComponentModel;
 using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using MySqlX.XDevAPI.Common;
 
 namespace VP_Project
 {
@@ -17,8 +18,6 @@ namespace VP_Project
         public Form3()
         {
             InitializeComponent();
-
-            
         }
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -67,11 +66,93 @@ namespace VP_Project
             f4.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to permanently delete the registeration of this customer ?","Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    int CustomerId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                    MySqlCommand cmd = new MySqlCommand("DELETE FROM CustomerLogin WHERE CustomerId = @CustomerId", connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@CustomerId", CustomerId);
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    getRecords();
+                    MessageBox.Show("Registeration of (Customer Id: " + CustomerId + ") has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please, Select row record first to delete.", "Not Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             Form4 f4 = new Form4();
             f4.label13.Text = "- as employee";
             f4.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (dataGridView2.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to permanently delete the registeration of this employee ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    int EmployeeId = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells[0].Value);
+                    MySqlCommand cmd = new MySqlCommand("DELETE FROM EmployeeLogin WHERE EmployeeId = @EmployeeId", connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@EmployeeId", EmployeeId);
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    getRecords();
+                    MessageBox.Show("Registeration of (Employee Id: " + EmployeeId + ") has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please, Select row record first to delete.", "Not Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (dataGridView3.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Do you want to delete this order ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    int OrderId = Convert.ToInt32(dataGridView3.SelectedRows[0].Cells[0].Value);
+                    MySqlCommand cmd = new MySqlCommand("DELETE FROM CustomerOrder WHERE OrderId = @OrderId", connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@OrderId", OrderId);
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    getRecords();
+                    MessageBox.Show("Order with (Order Id: " + OrderId + ") has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please, Select row record first to delete.", "Not Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to logout ?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Form1 f1 = new Form1();
+                f1.Show();
+            }
         }
 
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
@@ -88,7 +169,5 @@ namespace VP_Project
                 panel1.Select();
             }
         }
-
-        
     }
 }

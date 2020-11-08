@@ -48,9 +48,7 @@ namespace VP_Project
                             cmd.ExecuteNonQuery();
                             con.Close();
                             MessageBox.Show("Account Registered Succesfully As Client / Customer", "Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            textBox1.Text = string.Empty; textBox2.Text = string.Empty;
-                            textBox3.Text = string.Empty; textBox4.Text = string.Empty;
-                            textBox5.Text = string.Empty;
+                            this.Hide();
                         }
                         catch (Exception ex)
                         {
@@ -72,9 +70,7 @@ namespace VP_Project
                             cmd.ExecuteNonQuery();
                             con.Close();
                             MessageBox.Show("Account Registered Succesfully As Employee", "Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            textBox1.Text = string.Empty; textBox2.Text = string.Empty;
-                            textBox3.Text = string.Empty; textBox4.Text = string.Empty;
-                            textBox5.Text = string.Empty;
+                            this.Hide();
                         }
                         catch (Exception ex)
                         {

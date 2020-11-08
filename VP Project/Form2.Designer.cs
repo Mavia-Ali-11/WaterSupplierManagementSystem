@@ -71,6 +71,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
@@ -172,11 +173,13 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -217,6 +220,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -715,11 +719,22 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Candara", 15F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(538, 34);
+            this.label18.Location = new System.Drawing.Point(547, 34);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(207, 24);
+            this.label18.Size = new System.Drawing.Size(216, 24);
             this.label18.TabIndex = 15;
-            this.label18.Text = "- Place Your Order Now";
+            this.label18.Text = " (Place Your Order Now)";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Gadugi", 23.75F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(193, 24);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(358, 38);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Water Supplier System";
             // 
             // label21
             // 
@@ -941,6 +956,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label67);
+            this.groupBox1.Controls.Add(this.label68);
+            this.groupBox1.Controls.Add(this.pictureBox9);
             this.groupBox1.Controls.Add(this.label64);
             this.groupBox1.Controls.Add(this.label62);
             this.groupBox1.Controls.Add(this.label63);
@@ -2046,17 +2064,6 @@
             this.pictureBox11.TabIndex = 4;
             this.pictureBox11.TabStop = false;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Gadugi", 23.75F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(184, 24);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(358, 38);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "Water Supplier System";
-            // 
             // label65
             // 
             this.label65.AutoSize = true;
@@ -2100,6 +2107,38 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(316, 85);
             this.panel14.TabIndex = 64;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label67.ForeColor = System.Drawing.Color.Gray;
+            this.label67.Location = new System.Drawing.Point(873, 1716);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(130, 16);
+            this.label67.TabIndex = 99;
+            this.label67.Text = "- Drink good live good";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft YaHei", 17.25F, System.Drawing.FontStyle.Bold);
+            this.label68.ForeColor = System.Drawing.Color.Black;
+            this.label68.Location = new System.Drawing.Point(871, 1686);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(145, 31);
+            this.label68.TabIndex = 98;
+            this.label68.Text = "Save Water";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(794, 1667);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(71, 68);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 97;
+            this.pictureBox9.TabStop = false;
             // 
             // Form2
             // 
@@ -2188,6 +2227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2343,5 +2383,8 @@
         public System.Windows.Forms.Label label66;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label67;
+        public System.Windows.Forms.Label label68;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }

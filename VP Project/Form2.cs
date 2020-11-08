@@ -422,10 +422,12 @@ namespace VP_Project
                     DateTime now = DateTime.Now;
                     string dateTime = now.Day + "-" + now.Month + "-" + now.Year + " " + now.Hour + ":" + now.Minute + ":" + now.Second;
                     MySqlConnection con = new MySqlConnection(@"server=localhost;userid=root;password=mavyaali@795;database=ManagementSystem");
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO CustomerOrder VALUES(@clientname, @phonenumber, @emailid, @deliveryaddress, @datetimeoforder, @quantity_250ml, @quantity_300ml, @quantity_500ml, @quantity_1litre," +
-                    " @quantity_2litre, @quantity_5litre, @quantity_10litre, @quantity_20litre, @quantityofpack_250ml, @quantityofpack_500ml, @quantityofpack_1litre, @quantityofpack_allsizes, @totalamount)", con);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO CustomerOrder(customername, phonenumber, emailid, deliveryaddress, datetimeoforder, quantity_250ml, quantity_300ml, quantity_500ml, quantity_1litre," +
+                    " quantity_2litre, quantity_5litre, quantity_10litre, quantity_20litre, quantityofpack_250ml, quantityofpack_500ml, quantityofpack_1litre, quantityofpack_allsizes, totalamount)" +
+                    " VALUES(@customername, @phonenumber, @emailid, @deliveryaddress, @datetimeoforder, @quantity_250ml, @quantity_300ml, @quantity_500ml, @quantity_1litre, @quantity_2litre, @quantity_5litre, @quantity_10litre," +
+                    " @quantity_20litre, @quantityofpack_250ml, @quantityofpack_500ml, @quantityofpack_1litre, @quantityofpack_allsizes, @totalamount)", con);
                     cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@clientname", textBox14.Text);
+                    cmd.Parameters.AddWithValue("@customername", textBox14.Text);
                     cmd.Parameters.AddWithValue("@phonenumber", textBox13.Text);
                     cmd.Parameters.AddWithValue("@emailid", textBox15.Text);
                     cmd.Parameters.AddWithValue("@deliveryaddress", textBox16.Text);

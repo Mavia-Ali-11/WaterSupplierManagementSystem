@@ -218,10 +218,10 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.Green;
             this.linkLabel1.Location = new System.Drawing.Point(858, 188);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(218, 23);
+            this.linkLabel1.Size = new System.Drawing.Size(250, 23);
             this.linkLabel1.TabIndex = 48;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Register Account As Client?";
+            this.linkLabel1.Text = "Register Account As Customer?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // panel1
