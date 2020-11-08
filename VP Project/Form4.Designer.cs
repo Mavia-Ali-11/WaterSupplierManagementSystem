@@ -298,6 +298,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label label13;
     }
 }

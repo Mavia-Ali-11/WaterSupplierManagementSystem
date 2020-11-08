@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 
 namespace VP_Project
@@ -34,29 +33,55 @@ namespace VP_Project
             {
                 if (Isvalid())
                 {
-                    try
+                    if(label13.Text == "- as customer")
                     {
-                        MySqlConnection con = new MySqlConnection(@"server=localhost;userid=root;password=mavyaali@795;database=ManagementSystem");
-                        MySqlCommand cmd = new MySqlCommand("INSERT INTO ClientLogin VALUES(@username, @emailid, @phonenumber, @passcode)", con);
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Parameters.AddWithValue("@username", textBox1.Text);
-                        cmd.Parameters.AddWithValue("@emailid", textBox2.Text);
-                        cmd.Parameters.AddWithValue("@phonenumber", textBox3.Text);
-                        cmd.Parameters.AddWithValue("@passcode", textBox5.Text);
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        con.Close();
-                        MessageBox.Show("Account Registered Succesfully As Client / Customer", "Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        textBox1.Text = string.Empty;
-                        textBox2.Text = string.Empty;
-                        textBox3.Text = string.Empty;
-                        textBox4.Text = string.Empty;
-                        textBox5.Text = string.Empty; 
+                        try
+                        {
+                            MySqlConnection con = new MySqlConnection(@"server=localhost;userid=root;password=mavyaali@795;database=ManagementSystem");
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO CustomerLogin (customername, emailid, phonenumber,passcode) VALUES(@customername, @emailid, @phonenumber, @passcode)", con);
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@customername", textBox1.Text);
+                            cmd.Parameters.AddWithValue("@emailid", textBox2.Text);
+                            cmd.Parameters.AddWithValue("@phonenumber", textBox3.Text);
+                            cmd.Parameters.AddWithValue("@passcode", textBox5.Text);
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+                            MessageBox.Show("Account Registered Succesfully As Client / Customer", "Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            textBox1.Text = string.Empty; textBox2.Text = string.Empty;
+                            textBox3.Text = string.Empty; textBox4.Text = string.Empty;
+                            textBox5.Text = string.Empty;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Registeration unsuccesfull due to " + ex);
+                        }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show("Registeration unsuccesfull due to " + ex);
+                        try
+                        {
+                            MySqlConnection con = new MySqlConnection(@"server=localhost;userid=root;password=mavyaali@795;database=ManagementSystem");
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO EmployeeLogin (employeename, emailid, phonenumber,passcode) VALUES(@employeename, @emailid, @phonenumber, @passcode)", con);
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@employeename", textBox1.Text);
+                            cmd.Parameters.AddWithValue("@emailid", textBox2.Text);
+                            cmd.Parameters.AddWithValue("@phonenumber", textBox3.Text);
+                            cmd.Parameters.AddWithValue("@passcode", textBox5.Text);
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+                            MessageBox.Show("Account Registered Succesfully As Employee", "Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            textBox1.Text = string.Empty; textBox2.Text = string.Empty;
+                            textBox3.Text = string.Empty; textBox4.Text = string.Empty;
+                            textBox5.Text = string.Empty;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Registeration unsuccesfull due to " + ex);
+                        }
                     }
+                    
                 }
             }
             else if (textBox4.Text != textBox5.Text)

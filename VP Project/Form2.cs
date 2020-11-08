@@ -7,10 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 using Tulpep.NotificationWindow;
+using System.Windows.Forms.VisualStyles;
 
 namespace VP_Project
 {

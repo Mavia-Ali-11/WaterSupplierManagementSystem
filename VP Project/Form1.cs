@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 
 namespace VP_Project
@@ -28,13 +27,13 @@ namespace VP_Project
         }
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            groupBox1.Text = "Client Login";
+            groupBox1.Text = "Customer Login";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
-            Form3 f3 = new Form3(this,null);
+            Form3 f3 = new Form3();
             if (radioButton1.Checked == true)
             {
                 string conString = "server=localhost;userid=root;password=mavyaali@795;database=ManagementSystem";
@@ -54,6 +53,12 @@ namespace VP_Project
                     if (count >= 1)
                     {
                         this.Hide();
+                        f3.button1.Visible = true;
+                        f3.button2.Visible = true;
+                        f3.button3.Visible = true;
+                        f3.button4.Visible = true;
+                        f3.label10.Text = textBox1.Text;
+                        f3.label2.Text = "Admin View";
                         f3.Show();
                     }
                     else
@@ -89,6 +94,8 @@ namespace VP_Project
                     if (count >= 1)
                     {
                         this.Hide();
+                        f3.label10.Text = textBox1.Text;
+                        f3.label2.Text = "Employee View";
                         f3.Show();
                     }
                     else
@@ -108,7 +115,7 @@ namespace VP_Project
             else if (radioButton3.Checked == true)
             {
                 string conString = "server=localhost;userid=root;password=mavyaali@795;database=ManagementSystem";
-                string loginQuery = "SELECT * FROM ClientLogin WHERE Clientname='" + textBox1.Text + "' and Passcode='" + textBox2.Text + "'";
+                string loginQuery = "SELECT * FROM CustomerLogin WHERE CustomerName='" + textBox1.Text + "' and Passcode='" + textBox2.Text + "'";
                 MySqlConnection con = new MySqlConnection(conString);
                 MySqlCommand cmd = new MySqlCommand(loginQuery, con);
                 MySqlDataReader reader;
@@ -124,6 +131,8 @@ namespace VP_Project
                     if (count >= 1)
                     {
                         this.Hide();
+                        f2.label66.Text = textBox1.Text;
+                        f2.textBox14.Text = textBox1.Text;
                         f2.Show();
                     }
                     else
@@ -153,9 +162,9 @@ namespace VP_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            Form3 f3 = new Form3();
             this.Hide();
-            f2.Show();
+            f3.Show();
             //DialogResult result = MessageBox.Show("Do you want to exit ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //if (result == DialogResult.Yes)
             //{
