@@ -48,7 +48,7 @@ namespace VP_Project
                             cmd.ExecuteNonQuery();
                             con.Close();
                             MessageBox.Show("Account Registered Succesfully As Client / Customer", "Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
+                            this.Close();
                         }
                         catch (Exception ex)
                         {
@@ -70,14 +70,13 @@ namespace VP_Project
                             cmd.ExecuteNonQuery();
                             con.Close();
                             MessageBox.Show("Account Registered Succesfully As Employee", "Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
+                            this.Close();
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show("Registeration unsuccesfull due to " + ex);
                         }
                     }
-                    
                 }
             }
             else if (textBox4.Text != textBox5.Text)
@@ -88,10 +87,6 @@ namespace VP_Project
                 textBox4.ForeColor = Color.Black;
                 textBox5.ForeColor = Color.Black;
             }
-        }
-        private void Form4_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Hide();
         }
     }
 }

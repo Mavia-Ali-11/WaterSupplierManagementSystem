@@ -27,5 +27,4 @@ C:\Users\Arham-Lap\source\repos\VP Project\VP Project\bin\Debug\MySql.Data.xml
 C:\Users\Arham-Lap\source\repos\VP Project\VP Project\obj\Debug\VP Project.exe.config
 C:\Users\Arham-Lap\source\repos\VP Project\VP Project\obj\Debug\VP Project.csproj.CopyComplete
 C:\Users\Arham-Lap\source\repos\VP Project\VP Project\obj\Debug\VP_Project.Form4.resources
-C:\Users\Arham-Lap\source\repos\VP Project\VP Project\obj\Debug\VP_Project.Form5.resources
 C:\Users\Arham-Lap\source\repos\VP Project\VP Project\bin\Debug\Tulpep.NotificationWindow.dll

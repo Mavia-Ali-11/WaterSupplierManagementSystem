@@ -15,25 +15,21 @@ namespace VP_Project
     public partial class Form3 : Form
     {
         MySqlConnection connection = new MySqlConnection(@"server=localhost;userid=root;password=mavyaali@795;database=managementsystem");
+
         public Form3()
         {
             InitializeComponent();
         }
+
         private void Form3_Load(object sender, EventArgs e)
         {
             getRecords();
             panel1.Select();
-            dataGridView1.MultiSelect = false;
-            dataGridView2.MultiSelect = false;
-            dataGridView3.MultiSelect = false;
-            dataGridView1.Rows[0].Selected = false;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        private void getRecords()
+        public void getRecords()
         {
+            MySqlConnection connection = new MySqlConnection(@"server=localhost;userid=root;password=mavyaali@795;database=managementsystem");
             MySqlCommand cmd1 = new MySqlCommand("SELECT CustomerId, CustomerName, EmailId, PhoneNumber FROM CustomerLogin", connection);
             DataTable dataTable1 = new DataTable();
             connection.Open();
@@ -57,6 +53,18 @@ namespace VP_Project
             dataTable3.Load(sdr3);
             connection.Close();
             dataGridView3.DataSource = dataTable3;
+
+            label16.Text = dataGridView1.Rows.Count.ToString();
+            label18.Text = dataGridView2.Rows.Count.ToString();
+            label20.Text = dataGridView3.Rows.Count.ToString();
+
+            dataGridView1.MultiSelect = false;
+            dataGridView2.MultiSelect = false;
+            dataGridView3.MultiSelect = false;
+            dataGridView1.Rows[0].Selected = false;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -113,6 +121,8 @@ namespace VP_Project
                     connection.Close();
                     getRecords();
                     MessageBox.Show("Registeration of (Employee Id: " + EmployeeId + ") has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int totalRows2 = dataGridView2.Rows.Count;
+                    label18.Text = totalRows2.ToString();
                 }
             }
             else
@@ -155,6 +165,11 @@ namespace VP_Project
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            getRecords();
+        }
+
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you want to exit ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -168,6 +183,11 @@ namespace VP_Project
                 e.Cancel = true;
                 panel1.Select();
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

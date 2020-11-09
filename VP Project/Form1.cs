@@ -57,8 +57,8 @@ namespace VP_Project
                         f3.button2.Visible = true;
                         f3.button3.Visible = true;
                         f3.button4.Visible = true;
-                        f3.label10.Text = textBox1.Text;
                         f3.label2.Text = "Admin View";
+                        f3.label10.Text = textBox1.Text;
                         f3.Show();
                     }
                     else
