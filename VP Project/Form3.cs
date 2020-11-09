@@ -29,7 +29,6 @@ namespace VP_Project
 
         public void getRecords()
         {
-            MySqlConnection connection = new MySqlConnection(@"server=localhost;userid=root;password=mavyaali@795;database=managementsystem");
             MySqlCommand cmd1 = new MySqlCommand("SELECT CustomerId, CustomerName, EmailId, PhoneNumber FROM CustomerLogin", connection);
             DataTable dataTable1 = new DataTable();
             connection.Open();
@@ -62,6 +61,8 @@ namespace VP_Project
             dataGridView2.MultiSelect = false;
             dataGridView3.MultiSelect = false;
             dataGridView1.Rows[0].Selected = false;
+            dataGridView2.Rows[0].Selected = false;
+            dataGridView3.Rows[0].Selected = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -183,11 +184,6 @@ namespace VP_Project
                 e.Cancel = true;
                 panel1.Select();
             }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
