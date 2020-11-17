@@ -112,12 +112,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Water1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Water300ml.png" />
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="Resources\info.png" />

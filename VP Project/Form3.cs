@@ -161,6 +161,7 @@ namespace VP_Project
             DialogResult result = MessageBox.Show("Do you want to logout ?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                this.Hide();
                 Form1 f1 = new Form1();
                 f1.Show();
             }
@@ -176,6 +177,7 @@ namespace VP_Project
             DialogResult result = MessageBox.Show("Do you want to exit ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                this.Hide();
                 Form1 f1 = new Form1();
                 f1.Show();
             }
