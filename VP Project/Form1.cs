@@ -26,11 +26,7 @@ namespace VP_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.BeginInvoke((MethodInvoker)delegate
-            {
-                guide();
-            });
-            
+            guide();
             voiceRecognition();
         }
 
