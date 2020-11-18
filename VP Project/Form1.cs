@@ -8,15 +8,88 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Speech.Synthesis;
+using System.Speech.Recognition;
 
 namespace VP_Project
 {
     public partial class Form1 : Form
     {
+        SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine();
+        SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+        Choices words = new Choices();
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.BeginInvoke((MethodInvoker)delegate
+            {
+                guide();
+            });
+            
+            voiceRecognition();
+        }
+
+        public void guide()
+        {
+            synthesizer.Volume = 100;
+            synthesizer.SelectVoiceByHints(VoiceGender.Female);
+            synthesizer.Speak("Welcome, select login type of your account");
+        }
+
+        public void voiceRecognition()
+        {
+            words.Add(new string[] { "admin", "employee", "client", "customer", "registeraccount", "exit" });
+            Grammar grammer = new Grammar(new GrammarBuilder(words));
+            try
+            {
+                recognizer.RequestRecognizerUpdate();
+                recognizer.LoadGrammar(grammer);
+                recognizer.SpeechRecognized += sre_speechRecognized;
+                recognizer.SetInputToDefaultAudioDevice();
+                recognizer.RecognizeAsync(RecognizeMode.Multiple);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while detecting your voice due to " + ex.Message);
+            }
+        }
+
+        public void sre_speechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+            foreach (RecognizedWordUnit word in e.Result.Words)
+            {
+                if (word.Text ==  "admin") {
+                    radioButton1.Checked = true;
+                }
+
+                else if (word.Text == "employee")
+                {
+                    radioButton2.Checked = true;
+                }
+
+                else if (word.Text == "client" || word.Text == "customer")
+                {
+                    radioButton3.Checked = true;
+                }
+
+                else if (word.Text == "registeraccount")
+                {
+                    this.linkLabel1_LinkClicked(sender,null);
+                }
+
+                else if (word.Text == "exit")
+                {
+                    button2.PerformClick();
+                }
+
+            }
+        }
+
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             groupBox1.Text = "Admin Login";
@@ -162,14 +235,11 @@ namespace VP_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3();
-            this.Hide();
-            f3.Show();
-            //DialogResult result = MessageBox.Show("Do you want to exit ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //if (result == DialogResult.Yes)
-            //{
-            //    Application.ExitThread();
-            //}
+            DialogResult result = MessageBox.Show("Do you want to exit ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.ExitThread();
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -184,5 +254,6 @@ namespace VP_Project
                 e.Cancel = true;
             }
         }
+
     }
 }
